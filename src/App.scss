@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: 'Digital';
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
+      format('svg');
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  width: 90vmin;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-area: 1 / 1 / 7 / 5;
+  border-radius: 1rem;
+  font-family: Digital;
+  .operator {
+    background-color: #888;
+  }
+  #clear {
+    background-color: #b44;
+    &:hover{
+      background-color: #a44;
+      color: #eee;
+    }
+  }
+  #equals {
+    background-color: #55a;
+    &:hover{
+      background-color: #559;
+      color: #eee;
+    }
+  }
+}
+
+#calculator > * {
+  width: 100%;
+  background-color: #666;
+  color: white;
+  cursor: pointer;
+  border: solid #444 1px;
+  font-size: 2rem;
+  font-family: Digital;
+}
+#calculator > button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+#display {
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  grid-area: 1 / 1 / 2 / 5;
+  font-size: 10vmin;
+  padding: 0 0.5rem;
+  border-radius: 1rem 1rem 0 0;
+  color: #fd3;
+}
+
+#clear {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+#equals {
+  grid-area: 5 / 4 / 7 / 5;
+  border-radius: 0 0 1rem 0;
+}
+
+#zero {
+  grid-area: 6 / 1 / 7 / 3;
+  border-radius: 0 0 0 1rem;
+}
